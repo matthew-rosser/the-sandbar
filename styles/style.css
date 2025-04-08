@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'black_roseregular';
+    src: url('../assets/fonts/blackrose-2onld-webfont.woff2') format('woff2'),
+         url('../assets/fonts/blackrose-2onld-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --panel-color: rgba(255, 255, 255, 0.75);
+}
+
+* {
+    margin: 0;
+}
+
+.bg {
+    background-image: url("../assets/images/bg.png");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+body {
+    background-color: #f7c59f;
+    font-family: sans-serif;
+    padding: 1.5rem;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    background-color: var(--panel-color);
+    margin: 0 auto 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-family: "black_roseregular", sans-serif;
+}
+
+h2 {
+    color: #004e89;
+    font-family: "black_roseregular", sans-serif;
+}
+
+a {
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.group {
+    background-color: var(--panel-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+}
+
+.item {
+    margin-top: 0.5rem;
+}
+
+@media(width > 40rem) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    body {
+        max-width: 55rem;
+        margin: 0 auto;
+    }
+}
